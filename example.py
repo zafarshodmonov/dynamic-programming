@@ -4,7 +4,12 @@ import random
 class Example:
 
     @staticmethod
-    def leetcode_1277(m: int, n: int) -> list[list[int]]:
+    def leetcode_1277(m: int | None = None, n: int | None = None) -> list[list[int]]:
+        if m and n:
+            pass
+        else:
+            m = random.randint(1, 4)
+            n = random.randint(1, 4)
         M = []
         for i in range(m):
             q = []
